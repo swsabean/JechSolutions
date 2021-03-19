@@ -4,7 +4,7 @@
 
 \Exercise{1} Verify (1.1).
 \begin{solution}
-  If $a = c$ and $b = d$, then $(a, b) = (c, d)$ as a consequence of an axiom of 
+  If $a = c$ and $b = d$, then $(a, b) = (c, d)$ as a consequence of an axiom of
   first-order logic with equality, namely, that equals may be substituted for
   equals in a formula.
 
@@ -16,8 +16,34 @@
   \[
     \{ \{ a \}, \{ a, b \} \} = \{ \{ a \}, \{ a, a \} \} = \{ \{ a \} \}.
   \]
-Therefore $\{ a \} = \{ c \}$ and  $\{ a \} = \{ c, d \}$. Hence, $a = c = d$,
-from which it follows that $a = c$ and $b = d$. If $a \neq b$, then
-$\{ a \} = \{ c \}$ and $\{ a, b \} = \{ c, d \}$. Therefore $a = c$, and from
-this it follows that $\{ a, b \} = \{ a, d \}$. Hence $b = d$.
+  Therefore $\{ a \} = \{ c \}$ and  $\{ a \} = \{ c, d \}$. Hence, $a = c = d$,
+  from which it follows that $a = c$ and $b = d$. If $a \neq b$, then
+  $\{ a \} = \{ c \}$ and $\{ a, b \} = \{ c, d \}$. Therefore $a = c$, and from
+  this it follows that $\{ a, b \} = \{ a, d \}$. Hence $b = d$.
 \end{solution}
+
+\Exercise{2} There is no set $X$ such that $P(X) \subset X$.
+\begin{solution}
+  Suppose there exists a set $X$ such that $P(X) \subset X$. 
+  Let $Y = \{ x : x \in X \text{ and } x \notin x \}$. Clearly, $Y \subset X$,
+  hence $Y \in P(X)$ and therefore $Y \in X$. However $Y \in Y$ if and only if
+  $Y \notin Y$. We have therefore reached a contradiction and conclude that no
+  such set $X$ exists.
+\end{solution}
+
+Let
+\[
+  \N = \bigcap \{ X \colon X \text{ is inductive} \}.
+\]
+$\N$ is the smallest inductive set. Let us use the following notation:
+\[
+  0 = \emptyset, \quad
+  1 = \{ 0 \}, \quad
+  2 = \{ 0, 1 \}, \quad
+  3 = \{ 0, 1, 2 \}, \quad
+  \ldots.
+\]
+If $n \in \N$, let $ n + 1 = n \cup \{ n \}$. Let us define $<$ (on $\N$) by
+$n < m$ if and only if $n \in m$.
+
+A set $T$ is \emph{transitive} if $x \in T$ implies $x \subset T$.
