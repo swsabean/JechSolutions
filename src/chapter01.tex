@@ -1,0 +1,23 @@
+\part{Basic Set Theory}
+
+\chapter{Axioms of Set Theory}
+
+\Exercise{1} Verify (1.1).
+\begin{solution}
+  If $a = c$ and $b = d$, then $(a, b) = (c, d)$ as a consequence of an axiom of 
+  first-order logic with equality, namely, that equals may be substituted for
+  equals in a formula.
+
+  Conversely, suppose that $(a, b) = (c, d)$. Then
+  \[
+    \{ \{ a \}, \{ a, b \} \}  = \{ \{ c \}, \{ c, d \} \}.
+  \]
+  If $a = b$, then
+  \[
+    \{ \{ a \}, \{ a, b \} \} = \{ \{ a \}, \{ a, a \} \} = \{ \{ a \} \}.
+  \]
+Therefore $\{ a \} = \{ c \}$ and  $\{ a \} = \{ c, d \}$. Hence, $a = c = d$,
+from which it follows that $a = c$ and $b = d$. If $a \neq b$, then
+$\{ a \} = \{ c \}$ and $\{ a, b \} = \{ c, d \}$. Therefore $a = c$, and from
+this it follows that $\{ a, b \} = \{ a, d \}$. Hence $b = d$.
+\end{solution}

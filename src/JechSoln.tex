@@ -7,7 +7,19 @@
 
 \author{Steve Sabean}
 \title{Solutions to Jech's Set Theory, The Third Millenium Edition, Revised and Expanded}
+
+\newcommand{\Exercise}[1]{\setcounter{section}{#1}%
+  \addtocounter{section}{-1}%
+  \section{Exercise #1}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
 \begin{document}
 \frontmatter
 \maketitle
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\mainmatter
+\include{chapter01}
 \end{document}
