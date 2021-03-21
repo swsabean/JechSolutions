@@ -74,3 +74,60 @@ transitive, and for each $n$, $n = \{ m \in \N : m < n \}$.
   $k \in n$. It follows that $\{ m \in \N : m < n \} \subset n$
   and therefore that $n = \{ m \in \N : m < n \}$.
 \end{solution}
+
+\Exercise{4} If $X$ is inductive, then the set 
+$\{ x \in X : x \text{ is transitive} \}$ is inductive. Hence
+every $n \in \N$ is transitive.
+\begin{solution}
+  Let $X$ be inductive. Let $Y = \{ x \in X : x \text{ is
+  transitive} \}$. Since $X$ is inductive, $\emptyset \in X$.
+  Since $\emptyset$ is transitive (vacuously), 
+  $\emptyset \in Y$. Let $x \in Y$, then $x \in X$ and $x$ is
+  transitive. Since $X$ is inductive, $x \cup \{ x \} \in X$.
+  If $y \in x \cup \{ x \}$, then $y \in x$ or $y = x$. If
+  $y \in x$, then since $x$ is transitive, $y \subset x$ and
+  therefore $y \subset x \cup \{ x \}$. If $y = x$, then
+  clearly $ y \subset x \cup \{ x \}$. Hence
+  $x \cup \{ x \}$ is transitive, from which it follows that
+  $x \cup \{ x \} \in Y$. Therefore $Y$ is inductive.
+
+  Since $\N$ is inductive, the set 
+  $M = \{ n \in \N : n \text{ is transitive} \}$ is inductive.
+  Clearly, $M \subset \N$, and since $M$ is inductive,
+  $\N \subset M$, and therefore $M = \N$. From this it follows
+  that for every $n \in \N$, $n$ is transitive.
+\end{solution}
+
+\Exercise{5} If $X$ is inductive, then the set
+$\{ x \in X : x \text{ is transitive and } x \notin x \}$ is
+inductive. Hence $n \notin n$ and $n \neq n + 1$ for each
+$n \in \N$.
+\begin{solution}
+  Let $X$ be inductive. Let
+  $Y = \{ x \in X : x \text{ is transitive and } x \notin x \}$.
+  Since $X$ is inductive, $\emptyset \in X$. Since $\emptyset$ is
+  transitive and $\emptyset \notin \emptyset$, $\emptyset \in Y$.
+  Let $x \in Y$, then $x \in X$, $x$ is transitive, and 
+  $x \notin x$. Since $X$ is inductive, $x \cup \{ x \} \in X$.
+  If $y \in x \cup \{ x \}$, then $y \in x$ or $y = x$. If
+  $y \in x$, then since $x$ is transitive, $y \subset x$ and
+  therefore $y \subset x \cup \{ x \}$. If $y = x$, then clearly
+  $ y \subset x \cup \{ x \}$. Hence $x \cup \{ x \}$ is
+  transitive. Suppose that $x \cup \{ x \} \in x \cup \{ x \}$.
+  Then $x \cup \{ x \} \in x$ or $x \cup \{ x \} = x$. If
+  $x \cup \{ x \} \in x$, then since $x$ is transitive, we have
+  $x \cup \{ x \} \subset x$. Therefore, since 
+  $x \in x \cup \{ x \}$, we have $x \in x$, which is a
+  contradiction. If $x \cup \{ x \} = x$, then since
+  $x \in x \cup \{ x \}$, we again have $x \in x$. Thus in either
+  case we have reached a contradiction, and conclude that
+  $x \cup \{ x \} \notin x \cup \{ x \}$. Therefore
+  $x \cup \{ x \} \in Y$. Hence $Y$ is inductive.
+
+  Since $\N$ is inductive, the set
+  $M = \{ n \in \N : n \text{ is transitive and } n \notin n \}$
+  is inductive. Clearly, $M \subset \N$, and since $M$ is inductive, $\N \subset M$, and therefore $M = \N$. Therefore
+  $n \notin n$ for every $n \in \N$. Since
+  $n \in n \cup \{ n \}$, but $n \notin n$, it follows that
+  $n \neq n + 1$.
+\end{solution}
