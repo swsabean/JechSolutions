@@ -47,3 +47,30 @@ If $n \in \N$, let $ n + 1 = n \cup \{ n \}$. Let us define $<$ (on $\N$) by
 $n < m$ if and only if $n \in m$.
 
 A set $T$ is \emph{transitive} if $x \in T$ implies $x \subset T$.
+
+\Exercise{3} If $X$ is inductive, then the set
+$\{ x \in X : x \subset X \}$ is inductive. Hence $\N$ is
+transitive, and for each $n$, $n = \{ m \in \N : m < n \}$.
+\begin{solution}
+  Let $X$ be inductive. Let $Y = \{ x \in X : x \subset X \}$.
+  Since $X$ is inductive, $\emptyset \in X$. Since 
+  $\emptyset \subset X$, $\emptyset \in Y$. Let $x \in Y$, then
+  $x \in X$ and $x \subset X$. Since $X$ is inductive, 
+  $x \cup \{ x \} \in X$. If $y \in x \cup \{ x \}$, then 
+  $y \in x$ or $y = x$. If $y \in x$, then since $x \subset X$,
+  we have $y \in X$. If $y = x$, then clearly $y \in X$. Hence 
+  $x \cup \{ x \} \subset X$. Thus, it follows that 
+  $x \cup \{ x \} \in Y$ and therefore $Y$ is inductive.
+  
+  Since $\N$ is inductive, the set 
+  $M = \{ n \in \N : n \subset \N \}$ is inductive. Clearly, 
+  $M \subset \N$, and since $M$ is inductive, $\N \subset M$, 
+  and therefore $M = \N$. From this it follows that for every 
+  $n \in \N$, $n \subset \N$. Hence, $\N$ is transitive. If 
+  $n \in \N$, then $n \subset \N$. Hence if $m \in n$, then 
+  $m \in \N$, and by definition, $m < n$. Therefore 
+  $n \subset \{ m \in \N : m < n \}$. Conversely, if 
+  $k \in \{ m \in \N : m < n \}$, then $k < n$ and consequently
+  $k \in n$. It follows that $\{ m \in \N : m < n \} \subset n$
+  and therefore that $n = \{ m \in \N : m < n \}$.
+\end{solution}
