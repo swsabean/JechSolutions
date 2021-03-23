@@ -126,8 +126,36 @@ $n \in \N$.
 
   Since $\N$ is inductive, the set
   $M = \{ n \in \N : n \text{ is transitive and } n \notin n \}$
-  is inductive. Clearly, $M \subset \N$, and since $M$ is inductive, $\N \subset M$, and therefore $M = \N$. Therefore
+  is inductive. Clearly, $M \subset \N$, and since $M$ is
+  inductive, $\N \subset M$, and therefore $M = \N$. Therefore
   $n \notin n$ for every $n \in \N$. Since
   $n \in n \cup \{ n \}$, but $n \notin n$, it follows that
   $n \neq n + 1$.
+\end{solution}
+
+\Exercise{6} If $X$ is inductive, then the set $\{ x \in X : x$
+is transitive and every nonempty $z \subset x$ has an
+$\in$-minimal element$\}$ is inductive ($t$ is
+$\in$-\textit{minimal} in $z$ if there is no $s \in z$ such
+that $s \in t$).
+\begin{solution}
+  Let $X$ be inductive. Let $Y = \{ x \in X : x$ is transitive and
+  every nonempty $z \subset x$ has an $\in$-minimal element$\}$.
+  Since $X$ is inductive, $\emptyset \in X$. Since $\emptyset$ is
+  transitive and since $\emptyset$ has no nonempty subsets,
+  $\emptyset \in Y$. Let $x \in Y$, then $x \in X$, $x$ is transitive,
+  and every nonempty subset of $x$ has an $\in$-minimal element. Since
+  $X$ is inductive, $x \cup \{ x \} \in X$. If $y \in x \cup \{ x \}$,
+  then $y \in x$ or $y = x$. If $y \in x$, then since $x$ is transitive,
+  $y \subset x$ and therefore $y \subset x \cup \{ x \}$. If $y = x$,
+  then clearly $ y \subset x \cup \{ x \}$. Hence $x \cup \{ x \}$ is
+  transitive. Let $z$ be a nonempty subset of $x \cup \{ x \}$. If 
+  $z - \{ x \}$ is empty, then clearly $z = \{ x \}$, hence $z$ has an
+  $\in$-minimal element, namely, $x$. If $z - \{ x \}$ is nonempty, then since $z - \{ x \} \subset x$, it follows that $z - \{ x \}$ has an
+  $\in$-minimal element. Let $t$ be an $\in$-minimal element of
+  $z - \{ x \}$. Then $t$ is also an $\in$-minimal element of $z$. To
+  see this, suppose that $x \in t$. Since $x$ is transitive, $t \in x$
+  implies $t \subset x$. Hence, $x \in t$ implies $x \in x$. This means
+  that $x$ has no $\in$-minimal element, which is a contradiction.
+  Therefore, $x \cup \{ x \} \in Y$. Hence $Y$ is inductive.
 \end{solution}
