@@ -161,7 +161,7 @@ that $s \in t$).
   Therefore, $x \cup \{ x \} \in Y$. Hence $Y$ is inductive.
 \end{solution}
 
-Exercise{7} Every nonempty $X \subset \N$ has an $\in$-minimal element.
+\Exercise{7} Every nonempty $X \subset \N$ has an $\in$-minimal element.
 [Pick $n \in X$ and look at $X \cap n$.]
 \begin{solution}
   Let $X \subset \N$ be nonempty. Since $X$ is nonempty, let $n \in X$.
@@ -174,5 +174,21 @@ Exercise{7} Every nonempty $X \subset \N$ has an $\in$-minimal element.
   therefore $s \in n$. This contradicts the minimality of $t$.
   Therefore, no such $s$ exists and we conclude that $t$ is an
   $\in$-minimal element of $X$.
-  
+\end{solution}
+
+\Exercise{8} If $X$ is inductive then so is
+$\{ x \in X : x = \emptyset \text{ or } x = y 
+\cup \{ y \} \text{ for some } y \}$. Hence each 
+$n \neq 0$ is $m + 1$ for some $m$.
+\begin{solution}
+  Let $X$ be inductive. Let 
+  $Y = \{ x \in X : x = \emptyset \text{ or } x = y 
+  \cup \{ y \} \text{ for some } y \}$. Clearly, 
+  $\emptyset \in Y$. Let $x \in Y$, then $x \in X$. Since $X$ is
+  inductive, $x \cup \{ x \} \in X$, and it follows that 
+  $x \cup \{ x \} \in Y$.
+
+  Hence $\N \subset Y$. Therefore, either $n = \emptyset = 0$ or 
+  $n = m \cup \{ m \}$ for some $m$. If the latter, then $m \in n$ and
+  therefore $m \in \N$. Hence $n = m + 1$.
 \end{solution}
