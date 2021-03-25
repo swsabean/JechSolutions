@@ -192,3 +192,18 @@ $n \neq 0$ is $m + 1$ for some $m$.
   $n = m \cup \{ m \}$ for some $m$. If the latter, then $m \in n$ and
   therefore $m \in \N$. Hence $n = m + 1$.
 \end{solution}
+
+\Exercise{9} \textbf{Induction}. Let $A$ be a subset of $\N$ such that
+$0 \in A$, and if $n \in A$ then $n + 1 \in A$. Then $A = \N$.
+
+\begin{solution}
+  Suppose that $A \neq \N$. Then $\N - A$ is a nonempty subset of
+  $\N$. Therefore, by Exercise 1.7, $\N - A$ has an $\in$-minimal
+  element. Let $t$ be an $\in$-minimal element of $\N - A$. Since 
+  $0 \in A$, we have $t \neq 0$. Therefore, by Exercise 1.8, 
+  $t = s + 1$ for some $s \in \N$. Suppose that $s \notin A$. Then 
+  $s \in \N - A$. However, since $s \in t$, this contradicts the
+  minimality of $t$ in $\N - A$. Hence $s \in A$, from which it follows
+  that $t = s + 1 \in A$. But this is another contradiction, and we
+  conclude that $A = \N$.
+\end{solution}
