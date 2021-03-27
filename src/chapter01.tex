@@ -195,7 +195,6 @@ $n \neq 0$ is $m + 1$ for some $m$.
 
 \Exercise{9} \textbf{Induction}. Let $A$ be a subset of $\N$ such that
 $0 \in A$, and if $n \in A$ then $n + 1 \in A$. Then $A = \N$.
-
 \begin{solution}
   Suppose that $A \neq \N$. Then $\N - A$ is a nonempty subset of
   $\N$. Therefore, by Exercise 1.7, $\N - A$ has an $\in$-minimal
@@ -206,4 +205,25 @@ $0 \in A$, and if $n \in A$ then $n + 1 \in A$. Then $A = \N$.
   minimality of $t$ in $\N - A$. Hence $s \in A$, from which it follows
   that $t = s + 1 \in A$. But this is another contradiction, and we
   conclude that $A = \N$.
+\end{solution}
+
+\Exercise{10} Each $n \in \N$ is T-finite.
+\begin{solution}
+  Let $A = \{ n \in \N : n \text{ is T-finite} \}$. Clearly $0$ is
+  T-finite, since if $X$ is a nonempty subset of $P(0) = \{ 0 \}$, then 
+  $X = \{ 0 \}$, where obviously $0$ is $\subset$-maximal in $X$. Let 
+  $n \in A$ and $X$ a nonempty subset of $P(n + 1)$. Consider the set 
+  $Y = \{ y : y = x - \{ n \} \text{ for some } x \in X \}$. Clearly 
+  $Y \subset P(n)$ and $Y$ is nonempty because $X$ is. Therefore let $u$ be
+  a $\subset$-maximal element of $Y$. If $u \cup \{ n \} \notin X$, then
+  $u$ is a $\subset$-maximal element of $X$. To see this, suppose that 
+  $v \in X$ with $u \subset v$. Then $v - \{ n \} \in Y$, and since 
+  $n \notin u$, we have $u \subset v - \{ n \}$, which contradicts the
+  maximality of $u$. On the other hand, if $u \cup \{ n \} \in X$, then 
+  $u \cup \{ n \}$ is a $\subset$-maximal element of $X$. In this case, we
+  suppose that $v \in X$ with $u \cup \{ n \} \subset v$. Then 
+  $u = (u \cup \{ n \}) - \{ n \} \subset v - \{ n \}$. Since 
+  $v - \{ n \} \in Y$, this contradicts the maximality of $u$. Hence 
+  $X$ has a $\subset$-maximal element. Therefore $n + 1 \in A$. By Exercise
+  1.9, $A = \N$, and therefore every $n \in \N$ is T-finite.
 \end{solution}
