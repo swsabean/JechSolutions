@@ -231,7 +231,22 @@ $0 \in A$, and if $n \in A$ then $n + 1 \in A$. Then $A = \N$.
 \Exercise{11} $\N$ is T-infinite; the set $\N \subset P(\N)$ has no 
 $\subset$-maximal element.
 \begin{solution}
-Suppose that $\N$ has a $\subset$-maximal element $k$. Since 
-$k + 1 = k \cup \{ k \} \in \N$ and since $k \subset k + 1$, we have reached a 
-contradiction. Hence $\N$ has no $\subset$-maximal element.
+  Suppose that $\N$ has a $\subset$-maximal element $k$. Since 
+  $k + 1 = k \cup \{ k \} \in \N$ and since $k \subset k + 1$, we have reached a 
+  contradiction. Hence $\N$ has no $\subset$-maximal element.
+\end{solution}
+
+\Exercise{12} Every finite set is T-finite.
+\begin{solution}
+  Let $X$ be a finite set. Then there exists an $n \in \N$ such that there 
+  exists a one-to-one mapping, $f$, of $X$ onto $n$, i.e., 
+  $f : X \rightarrow n$. Let $A \subset P(X)$ be nonempty. Thus, for each 
+  $x \in A$, we have $f(x) \subset n$. Let 
+  $M = \{ y : y = f(x) \text{ for some } x \in A \}$. Then $M$ is a nonempty 
+  collection of subsets of $n$, and since $n$ is T-finite, $M$ has a 
+  $\subset$-maximal element $k$. The claim is that $u = f_{-1}(k)$ is 
+  $\subset$-maximal in $X$. Indeed, let $v \in A$ with $u \subset v$. Since 
+  $f$ is one-to-one, we therefore have $f(u) \subset f(v)$. However, this 
+  contradicts the maximality of $f(u)$. Hence every nonempty collection of 
+  subsets of $X$ has a $\subset$-maximal element, and hence $X$ is T-finite.
 \end{solution}
