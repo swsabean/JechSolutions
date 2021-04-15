@@ -1,0 +1,26 @@
+\chapter{Ordinal Numbers}
+
+\Exercise{1} The relation "$(P, <)$ is isomorphic to $(Q, <)$" is an 
+equivalence relation (on the class of all partially ordered sets).
+\begin{solution}
+Let $(P, <)$ be a partially ordered set. Let $\text{id}_P : P \rightarrow P$ 
+be the identity function, i.e., $\text{id}_P(p) = p$ for every $p \in P$. 
+Clearly, $\text{id}_P$ is a one-to-one function of $P$ onto itself. Also, 
+$\text{id}_P$ is obviously order-preserving, and since 
+$\text{id}_P = \text{id}^{-1}_P$, it follows that $\text{id}^{-1}_P$ is 
+order-preserving. Therefore, $\text{id}_P$ is an automorphism of $(P, >)$. 
+Hence, $(P, >)$ is isomorphic to itself.
+
+Let $P(, <)$ be isomorphic to $Q(, <)$ and let $f : P \rightarrow Q$ be an 
+isomorphism. Then $f^{-1} : Q \rightarrow P$ is one-to-one, onto, and 
+order-preserving. $f^{-1}$ is therefore an isomorphism, and hence, $(Q, <)$ is 
+isomorphic to $(P, <)$.
+
+Let $(P, <)$ be isomorphic to $(Q, <)$ and $(Q, <)$ be isomorphic to $(R, <)$. 
+Then there exist isomorphisms $f : P \rightarrow Q$ and $g : Q \rightarrow R$. 
+Therefore the composition $g \circ f$ is one-to-one and onto since $f$ and $g$ 
+are. Furthermore, $g \circ f$ is order-preserving, since $x > y$ implies 
+$f(x) > f(y)$ which further implies $g(f(x)) > g(f(y))$. The inverse 
+composition, $f^{-1} \circ g^{-1}$ is also order-preserving. Hence $g \circ f$ 
+is an isomorphism and thus $(P, <)$ is isomorphic to $(R, <)$.
+\end{solution}
