@@ -24,3 +24,44 @@ $f(x) > f(y)$ which further implies $g(f(x)) > g(f(y))$. The inverse
 composition, $f^{-1} \circ g^{-1}$ is also order-preserving. Hence $g \circ f$ 
 is an isomorphism and thus $(P, <)$ is isomorphic to $(R, <)$.
 \end{solution}
+
+\Exercise{2} $\alpha$ is a limit ordinal if and only if $\beta < \alpha$ implies 
+$\beta + 1 < \alpha$, for every $\beta$.
+\begin{solution}
+Let $\alpha$ be a limit ordinal. If $\alpha = 0$, then there is no $\beta$ such
+that $\beta < \alpha$. On the other hand, if $\alpha \neq 0$, then let $\beta$ 
+be an ordinal such that $\beta < \alpha \leq \beta + 1$. Let $x \in \beta + 1$. 
+Then, either $x \in \beta$, whereupon $x \in \alpha$, or $x = \beta$, where 
+again we have $x \in \alpha$. Hence, $x \in \beta + 1$ implies $x \in \alpha$, 
+or, $\beta + 1 \subset \alpha$. If $\beta + 1 = \alpha$, then $\alpha$ is a
+successor ordinal and therefore not a limit ordinal, which is a contradiction. 
+If $\beta + 1 \neq \alpha$, then by Lemma 2.11(iii), we have 
+$\beta + 1 < \alpha$, which is also a contradiction and we therefore conclude 
+that $\beta < \alpha$ implies $\beta + 1 < \alpha$
+
+Conversely, suppose that $\alpha$ is not a limit ordinal, i.e., $\alpha$ is a
+successor ordinal. Then $\alpha = \beta + 1$ for some $\beta$. Clearly, 
+$\beta < \alpha$. However, $\beta + 1 \nless \alpha$.
+\end{solution}
+
+\Exercise{3} If a set $X$ is inductive, then $X \cap \Ord$ is inductive. The set 
+$\N = \bigcap \{ X : X \text{ is inductive} \}$ is the least limit ordinal 
+$\neq 0$.
+\begin{solution}
+Let $X$ be an inductive set. Then, by the Separation Schema, we have that 
+$X \cap \Ord$ is a set. Since $X$ is inductive, $\emptyset \in X$. Clearly, 
+$0 = \emptyset \in \Ord$. Hence $\emptyset \in X \cap \Ord$. Let 
+$x \in X \cap \Ord$. Since $X$ is inductive, $x + 1 = x \cap \{ x \} \in X$. 
+Using (2.5), we have $x + 1 \in \Ord$. Therefore $x + 1 \in X \cap \Ord$. 
+Hence, $X \cap \Ord$ is inductive. 
+
+By Exercise 1.3, $\N$ is transitive. By Exercise 1.7, $(\N, \in)$ is 
+well-founded. Since $X \cap \Ord$ is inductive, we have 
+$\N \subset X \cap \Ord \subset \Ord$. Therefore, by Lemma 2.11(iv), it follows
+that $\N$ is linearly ordered by $\in$. Hence, $\N$ is transitive and 
+well-ordered by $\in$, that is, $\N$ is an ordinal. Since $\emptyset \in \N$, 
+we have $\N \neq 0$. Let $n \in \N$ be a nonzero ordinal. Then, by Exercise 
+1.8, there exists $m \in \N$ such that $n = m + 1$. Thus, $n$ is a successor 
+ordinal. Therefore, by Exercise 2.2, $\N$ is a limit ordinal, in fact, it is 
+the least nonzero limit ordinal.
+\end{solution}
