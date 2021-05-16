@@ -65,3 +65,72 @@ we have $\N \neq 0$. Let $n \in \N$ be a nonzero ordinal. Then, by Exercise
 ordinal. Therefore, by Exercise 2.2, $\N$ is a limit ordinal, in fact, it is 
 the least nonzero limit ordinal.
 \end{solution}
+
+\Exercise{4} (Without the Axiom of Infinity). Let $\omega =$ least limit 
+$\alpha \neq 0$ if it exists, $\omega = \Ord$ otherwise. Prove that the 
+following statements are equivalent:
+
+\begin{enumerate}
+\renewcommand{\labelenumii}{(\roman{enumii})}
+\item
+There exists an inductive set.
+\item
+There exists an infinite set.
+\item
+$\omega$ is a set.
+
+[For (ii) $\rightarrow$ (iii), apply Replacement to the set of all finite 
+subsets of $X$.]
+\end{enumerate}
+\begin{solution}
+(i) $\rightarrow$ (ii). Suppose that there exists an inductive set. Let 
+$\N = \bigcap \{ X : X$ is inductive$\}$. By Exercise 1.11, $\N$ is T-infinite.
+Hence, by Exercises 1.12 and 1.13, $\N$ is infinite.
+
+(ii) $\rightarrow$ (iii). Suppose that there exists an infinite set, $X$, and 
+that $\omega = \Ord$. Let $Y = \{ y \in P(Y) : y \text{ is finite} \}$. If 
+$y \in Y$, then $y$ is finite; therefore there exists a one-to-one mapping, 
+$f$, of $y$ onto some $n \in \omega$. By Replacement, we have $f(Y)$ is a set. 
+Clearly $\emptyset \in Y$ and $f(\emptyset) = 0$. Thus, $f(Y)$ is nonempty, 
+since $0 \in f(Y)$. Suppose that $n \in f(Y)$. Then there exists $y \in Y$ such
+that $f(y) = n$. Since $X$ is infinite, it follows that $X - y$ is nonempty. 
+Hence, let $z \in X - y$. Therefore, $y \cup \{ z \} \in Y$ and thus 
+$f(y \cup \{ z \}) = n + 1$. It follows that $n + 1 \in f(Y)$. Therefore, by 
+induction, $f(Y) = \omega$, and we have $\omega$ is a set
+
+(iii) $\rightarrow$ (i). Let $\omega$ be a set. Then $0 < \omega$, and for 
+every $n \in \omega$, $n + 1 \in \omega$ since $\omega$ is a limit ordinal. 
+Hence $\omega$ is inductive.
+\end{solution}
+
+\Exercise{5} If $W$ is a well-ordered set, then there exists no sequence 
+$\langle a_n : n \in \N \rangle$ in $W$ such that $a_0 > a_1 > a_2 > \ldots$.
+\begin{solution}
+Suppose that there exists such a sequence. Let $X = \{ a_n : n \in \N \}$. Then
+$X$ is a nonempty subset of $W$. Therefore, let $x$ be the least element of 
+$X$. Let $n$ be the least $n \in \N$ such that $a_n = x$. Hence, 
+$a_{n + 1} \geq a_n$. We have therefore reached a contradiction, and conclude 
+that no such sequence exists.
+\end{solution}
+
+\Exercise{6} There are arbitrarily large limit ordinals; i.e., 
+$\forall \alpha \; \exists \beta > \alpha$ ($\beta$ is a limit.)
+
+[Consider $\lim_{n \rightarrow \omega} \alpha_n$, where 
+$\alpha_{n+1} = \alpha_n + 1$.]
+\begin{solution}
+Suppose that there exists a largest limit ordinal, and let $\alpha_0$ be this 
+ordinal. For every $n < \omega$, let $\alpha_{n+1} = \alpha_n + 1$. Since 
+$\langle \alpha_n : n < \omega \rangle$ is clearly a nondecreasing sequence of 
+ordinals, we may define the limit 
+$\lim_{n \rightarrow \omega} \alpha_n = \sup \{ \alpha_n : n < \omega \}$. By 
+(2.4), $\sup \{ \alpha_n : n < \omega \}$ is an ordinal, hence, let 
+$\alpha_{\omega} = \sup \{ \alpha_n : n < \omega \}$. If $\alpha_{\omega}$ is 
+a successor, then there exists an ordinal $\xi < \alpha_{\omega}$ such that 
+$\xi + 1 = \alpha_{\omega}$.. However, if $\xi < \alpha_{\omega}$, then 
+$\xi \in \alpha_{\omega}$, and it follows that $\xi + 1 \in \alpha_{\omega}$. 
+We have therefore reached a contradiction and conclude that $\alpha_{\omega}$ 
+is a limit ordinal. Since $\alpha_0 < \alpha_{\omega}$, we see that $\alpha_0$ 
+is not the largest limit ordinal, which is yet another contradiction. Hence, we
+find that there indeed arbitrarily large limit ordinals.
+\end{solution}
