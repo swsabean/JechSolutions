@@ -134,3 +134,77 @@ is a limit ordinal. Since $\alpha_0 < \alpha_{\omega}$, we see that $\alpha_0$
 is not the largest limit ordinal, which is yet another contradiction. Hence, we
 find that there indeed arbitrarily large limit ordinals.
 \end{solution}
+
+\Exercise{7} Every normal sequence 
+$\langle \gamma_{\alpha} : \alpha \in \Ord \rangle$ has arbitrarily large 
+\textit{fixed points}, i.e., $\alpha$ such that $\gamma_{\alpha} = \alpha$.
+
+[Let $\alpha_{n + 1} = \gamma_{\alpha_n}$, and 
+$\alpha = \lim_{n \rightarrow \omega} \alpha_n$.]
+\begin{solution}
+First, since it is not done in the text, we state explicitly that $\Ord$ is 
+well-ordered as a class. That is, if $C$ is any nonempty class of ordinals, 
+then $C$ has a least element. By virtue of remark (2.3) following Lemma 2.11,
+ $\bigcap C$ is the least element of $C$.
+
+Given this declaration, it is necessary to verify the following extension of 
+Lemma 2.4. If $\langle \gamma_{\alpha} : \alpha \in \Ord \rangle$ is an 
+increasing sequence of ordinals, then $\gamma_{\alpha} \geq \alpha$ for every 
+$\alpha \in \Ord$. To see this, suppose that the class 
+$X = \left \{ \gamma_{\alpha} : \gamma_{\alpha} < \alpha \right \}$ is 
+nonempty, and let $\beta$ be the least element of $X$. Then 
+$\gamma_{\beta} < \beta$, and since 
+$\langle \gamma_{\alpha} : \alpha \in \Ord \rangle$ is an increasing sequence, 
+we have $\gamma_{\gamma_{\beta}} < \gamma_{\beta}$. But this contradicts the 
+fact that $\beta$ is the least ordinal such that $\gamma_{\alpha} < \alpha$. 
+We therefore conclude that $X$ is empty, and therefore that 
+$\gamma_{\alpha} \geq \alpha$ for every $\alpha \in \Ord$.
+
+Next, if $\langle \gamma_{\alpha} : \alpha \in \Ord \rangle$ is a normal 
+sequence and $X$ is any nonempty set of ordinals, then 
+$\gamma_{\sup X} = \sup \left \{ \gamma_{\alpha} : \alpha \in X \right \}$. For 
+this, let $\beta = \sup X$. By remark (2.4) following Lemma 2.11, $\beta$ is an 
+ordinal. If $\beta = 0$, then $X = \{ 0 \}$, and clearly 
+$\gamma_0 = \sup \{ \gamma_0 \}$. If $\beta$ is a successor ordinal, then 
+$\beta = \delta + 1$ for some ordinal $\delta$. Since $\beta = \sup X$, we have 
+$\beta \geq \xi$ for every $\xi \in X$. Suppose, in addition, that 
+$\delta \geq \xi$ for every $\xi \in X$. Then $\delta$ is an upper bound of 
+$X$, and since $\delta < \beta$, we have a contradiction of the fact that 
+$\beta = \sup X$. We therefore conclude that there exists $\epsilon \in X$ such 
+that $\delta < \epsilon$. Since $\beta = \sup X$, we have 
+$\beta \geq \epsilon$. Since $\beta = \inf \{ \zeta : \zeta > \delta \}$, we 
+have $\epsilon \geq \beta$. Therefore $\beta = \epsilon$, and it follows that 
+$\beta \in X$. Since $\langle \gamma_{\alpha} \rangle$ is increasing, it 
+follows that $\gamma_{\beta} \geq \gamma_{\xi}$ for every $\xi \in X$. Since 
+$\gamma_{\beta} \in \left \{ \gamma_{\alpha} : \alpha \in X \right \}$, it 
+follows that 
+$\gamma_{\beta} = \sup \left \{ \gamma_{\alpha} : \alpha \in X \right \}$. If 
+$\beta$ is a nonzero limit ordinal, then let $\delta$ be an ordinal such that 
+$\delta < \beta$. Since $\beta$ is a limit and since $\beta = \sup X$, there 
+exists $\epsilon \in X$ such that $\delta < \epsilon$. Since 
+$\langle \gamma_{\alpha} \rangle$ is increasing, we have 
+$\gamma_{\delta} < \gamma_{\epsilon}$. Hence, 
+$\gamma_{\delta} < \sup \left \{ \gamma_{\alpha} : \alpha \in X \right \}$, 
+which yields, since $\langle \gamma_{\alpha} \rangle$ is continuous, 
+$\gamma_{\beta} = \sup \left \{ \gamma_{\delta} : \delta < \beta \right \} \leq 
+\sup \left \{ \gamma_{\alpha} : \alpha \in X \right \}$. However, since 
+$\langle \gamma_{\alpha} \rangle$ increasing and $\beta = \sup X$, we have 
+$\sup \left \{ \gamma_{\alpha} : \alpha \in X \right \} \leq \gamma_{\beta}$. 
+Therefore, 
+$\gamma_{\beta} = \sup \left \{ \gamma_{\alpha} : \alpha \in X \right \}$, as 
+desired.
+
+We are now in a position to prove the main result. We define a sequence, 
+$\langle \alpha_n : n < \omega \rangle$ recursively, as follows: Let 
+$\alpha \in \Ord$ and let $\alpha_0 = \alpha$, and 
+$\alpha_{n + 1} = \gamma_{\alpha_n}$. Let 
+$\beta = \sup \left \{ \alpha_n : n < \omega \right \}$. Thus, 
+$\beta > \alpha$. Moreover, 
+$\gamma_{\beta} = \gamma_{\sup \left \{ \alpha_n : n < \omega \right \}} = \sup 
+\left \{ \gamma_{\alpha_n} : n < \omega \right \} = \sup \left \{ 
+\alpha_{n + 1} : n < \omega \right \} = \beta$.
+
+We may then find an even larger fixed point by taking 
+$\alpha = \gamma_{\beta}$ and repeating the process. Hence 
+$\langle \gamma_{\alpha} \rangle$ has arbitrarily large fixed points.
+\end{solution}
