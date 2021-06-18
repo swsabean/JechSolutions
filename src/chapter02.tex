@@ -187,7 +187,7 @@ $\gamma_{\delta} < \gamma_{\epsilon}$. Hence,
 $\gamma_{\delta} < \sup \left \{ \gamma_{\alpha} : \alpha \in X \right \}$, 
 which yields, since $\langle \gamma_{\alpha} \rangle$ is continuous, 
 $\gamma_{\beta} = \sup \left \{ \gamma_{\delta} : \delta < \beta \right \} \leq 
-\sup \left \{ \gamma_{\alpha} : \alpha \in X \right \}$. However, since 
+  \sup \left \{ \gamma_{\alpha} : \alpha \in X \right \}$. However, since 
 $\langle \gamma_{\alpha} \rangle$ increasing and $\beta = \sup X$, we have 
 $\sup \left \{ \gamma_{\alpha} : \alpha \in X \right \} \leq \gamma_{\beta}$. 
 Therefore, 
@@ -201,10 +201,101 @@ $\alpha_{n + 1} = \gamma_{\alpha_n}$. Let
 $\beta = \sup \left \{ \alpha_n : n < \omega \right \}$. Thus, 
 $\beta > \alpha$. Moreover, 
 $\gamma_{\beta} = \gamma_{\sup \left \{ \alpha_n : n < \omega \right \}} = \sup 
-\left \{ \gamma_{\alpha_n} : n < \omega \right \} = \sup \left \{ 
-\alpha_{n + 1} : n < \omega \right \} = \beta$.
+  \left \{ \gamma_{\alpha_n} : n < \omega \right \} = \sup \left \{ 
+  \alpha_{n + 1} : n < \omega \right \} = \beta$.
 
 We may then find an even larger fixed point by taking 
 $\alpha = \gamma_{\beta}$ and repeating the process. Hence 
 $\langle \gamma_{\alpha} \rangle$ has arbitrarily large fixed points.
+\end{solution}
+
+\Exercise{8} For all $\alpha$, $\beta$, and $\gamma$,
+\begin{enumerate}[label=(\roman*)]
+\item
+$\alpha \cdot \left ( \beta + \gamma \right ) = \alpha \cdot \beta + \alpha 
+  \cdot \gamma$,
+\item 
+$\alpha^{\beta + \gamma} = \alpha^{\beta} \cdot \alpha^{\gamma}$,
+\item
+$\left ( \alpha^{\beta} \right )^{\gamma} = \alpha^{\beta \cdot \gamma}$.
+\end{enumerate}
+\begin{solution}
+In each case, we proceed by transfinite induction on $\gamma$.
+
+(i) If $\gamma = 0$ then
+\begin{align*}
+\alpha \cdot \left ( \beta + 0 \right ) &= \alpha \cdot \beta \\
+&= \alpha \cdot \beta + 0 \\
+&= \alpha \cdot \beta + \alpha \cdot 0
+\end{align*}
+If $\gamma + 1$ is a successor ordinal then
+\begin{align*}
+\alpha \cdot \left ( \beta + \left ( \gamma + 1 \right )\right ) &= \alpha 
+  \cdot \left ( \left ( \beta + \gamma \right ) + 1 \right ) \\
+&= \alpha \cdot \left ( \beta + \gamma \right ) + \alpha \\
+&= \left ( \alpha \cdot \beta + \alpha \cdot \gamma \right ) + \alpha \\
+&= \alpha \cdot \beta + \left ( \alpha \cdot \gamma + \alpha \right ) \\
+&= \alpha \cdot \beta + \alpha \cdot \left ( \gamma + 1 \right )
+\end{align*}
+If $\gamma$ is a nonzero limit ordinal then
+\begin{align*}
+\alpha \cdot \left ( \beta + \gamma \right ) &= \alpha \cdot \lim_{\xi 
+  \rightarrow \gamma} \left ( \beta + \xi \right ) \\
+&= \lim_{\xi \rightarrow \gamma} \alpha \cdot \left ( \beta + \xi \right ) \\
+&= \lim_{\xi \rightarrow \gamma} \alpha \cdot \beta + \alpha \cdot \xi \\
+&= \alpha \cdot \beta + \lim_{\xi \rightarrow \gamma} \alpha \cdot \xi \\
+&= \alpha \cdot \beta + \alpha \cdot \gamma
+\end{align*}
+
+(ii) If $\gamma = 0$ then
+\begin{align*}
+\alpha^{\beta + 0} &= \alpha^{\beta} \\
+&= \alpha^{\beta} \cdot 1 \\
+&= \alpha^{\beta} \cdot \alpha^0
+\end{align*}
+If $\gamma + 1$ is a successor ordinal then
+\begin{align*}
+\alpha^{\beta + \left( \gamma + 1 \right)} &= \alpha^{\left( \beta + \gamma 
+  \right) + 1} \\
+&= \alpha^{\beta + \gamma} \cdot \alpha \\
+&= ( \alpha^{\beta} \cdot \alpha^{\gamma} ) \cdot \alpha \\
+&= \alpha^{\beta} \cdot \left (\alpha^{\gamma} \cdot \alpha \right) \\
+&= \alpha^{\beta} \cdot \alpha^{\gamma + 1}
+\end{align*}
+If $\gamma$ is a nonzero limit ordinal then
+\begin{align*}
+\alpha^{\beta + \gamma} &= \alpha^{\beta + \lim_{\xi \rightarrow \gamma} \xi} 
+  \\
+&= \alpha^{\lim_{\xi \rightarrow \gamma} \left( \beta + \xi \right)} \\
+&= \lim_{\xi \rightarrow \gamma} \alpha^{\beta + \xi} \\
+&= \lim_{\xi \rightarrow \gamma} \left( \alpha^{\beta} \cdot \alpha^{\xi} 
+  \right) \\
+&= \alpha^{\beta} \cdot \lim_{\xi \rightarrow \gamma} \alpha^{\xi} \\
+&= \alpha^{\beta} \cdot \alpha^{\lim_{\xi \rightarrow \gamma} \xi} \\
+&= \alpha^{\beta} \cdot \alpha^{\gamma}
+\end{align*}
+
+(iii) If $\gamma = 0$ then
+\begin{align*}
+\left( \alpha^{\beta} \right)^0 &= 1 \\
+&= \alpha^0 \\
+&= \alpha^{\beta \cdot 0}
+\end{align*}
+If $\gamma + 1$ is a successor ordinal then
+\begin{align*}
+\left( \alpha^{\beta} \right)^{\gamma + 1} &= \left( \alpha^{\beta} 
+  \right)^{\gamma} \cdot \alpha^{\beta} \\
+&= \alpha^{\beta \cdot \gamma} \cdot \alpha^{\beta} \\
+&= \alpha^{\beta \cdot \left( \gamma + 1 \right)}
+\end{align*}
+If $\gamma$ is a nonzero limit ordinal then
+\begin{align*}
+\left( \alpha^{\beta} \right)^{\gamma} &= \left( \alpha^{\beta} 
+  \right)^{\lim_{\xi \rightarrow \gamma} \xi} \\
+&= \lim_{\xi \rightarrow \gamma} \left( \alpha^{\beta} \right)^{\xi} \\
+&= \lim_{\xi \rightarrow \gamma} \alpha^{\beta \cdot \xi} \\
+&= \alpha^{\lim_{\xi \rightarrow \gamma} \beta \cdot \xi} \\
+&= \alpha^{\beta \cdot \lim_{\xi \rightarrow \gamma} \xi} \\
+&= \alpha^{\beta \cdot \gamma}
+\end{align*}
 \end{solution}
