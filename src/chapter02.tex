@@ -299,3 +299,77 @@ If $\gamma$ is a nonzero limit ordinal then
 &= \alpha^{\beta \cdot \gamma}
 \end{align*}
 \end{solution}
+
+\Exercise{9}
+\begin{enumerate}[label=(\roman*)]
+\item
+Show that $\left( \omega + 1 \right) \cdot 2 \neq \omega \cdot 2 + 1 \cdot 2$.
+\item
+Show that $\left( \omega \cdot 2 \right)^2 \neq \omega^2 \cdot 2^2$.
+\end{enumerate}
+\begin{solution}
+(i)
+\begin{align*}
+\left( \omega + 1 \right) \cdot 2 &= \left( \omega + 1 \right) + \left( \omega
+  + 1 \right) \\
+&= \left( \omega + \left( 1 + \omega \right) \right) + 1 \\
+&= \left( \omega + \omega \right) + 1 \\
+&= \omega \cdot 2 + 1 \\
+&< \omega \cdot 2 + 2 \\
+&= \omega \cdot 2 + 1 \cdot 2
+\end{align*}
+
+(ii)
+\begin{align*}
+\left( \omega \cdot 2 \right)^2 &= \left( \omega \cdot 2 \right) \cdot \left(
+  \omega \cdot 2 \right) \\
+&= \left( \omega \cdot \left( 2 \cdot \omega \right) \right) \cdot 2 \\
+&= \left( \omega \cdot \omega \right) \cdot 2 \\
+&= \omega^2 \cdot 2 \\
+&< \omega^2 \cdot 4 \\
+&= \omega^2 \cdot 2^2
+\end{align*}
+\end{solution}
+
+\Exercise{10} If $\alpha < \beta$ then $\alpha + \gamma \leq \beta + \gamma$, 
+$\alpha \cdot \gamma \leq \beta \cdot \gamma$, and 
+$\alpha^{\gamma} \leq \beta^{\gamma}$.
+\begin{solution}
+In each case, we proceed by induction on $\gamma$. First we consider sums. If 
+$\gamma = 0$, we have $\alpha + 0 = \alpha < \beta = \beta + 0$. If 
+$\gamma + 1$ is a successor ordinal, then 
+$\alpha + \gamma \leq \beta + \gamma < \left( \beta + \gamma \right) + 1$, 
+therefore $\alpha + \left( \gamma + 1 \right) = \left( \alpha + \gamma \right)
++ 1 \leq \left( \beta + \gamma \right) + 1 = \beta + \left( \gamma + 1
+\right)$. Finally, if $\gamma$ is a nonzero limit ordinal, then for every 
+$\xi < \gamma$, we have $\alpha + \xi \leq \beta + \xi$. From this it follows 
+that $\lim_{\xi \rightarrow \gamma} \alpha + \xi \leq \lim_{\xi \rightarrow 
+\gamma} \beta + \xi$, or, equivalently, $\alpha + \gamma \leq \beta + \gamma$.
+
+Next we consider products. If $\gamma = 0$, then 
+$\alpha \cdot 0 = 0 = \beta \cdot 0$. If $\gamma + 1$ is a successor ordinal, 
+then since $\alpha < \beta$, by virtue of Lemma 2.25(i) we have 
+$\alpha \cdot \left( \gamma + 1 \right) = \alpha \cdot \gamma + \alpha < \alpha
+\cdot \gamma + \beta$ and by the preceding result for sums, 
+$\alpha \cdot \gamma + \beta \leq \beta \cdot \gamma + \beta = \beta \cdot 
+\left( \gamma + 1 \right)$. Therefore, 
+$\alpha \cdot \left( \gamma + 1 \right) \leq \beta \cdot \left( \gamma + 1 
+\right)$. Finally, if $\gamma$ is a nonzero limit ordinal, then for every 
+$\xi < \gamma$, we have $\alpha \cdot \xi \leq \beta \cdot \xi$. From this it 
+follows that 
+$\lim_{\xi \rightarrow \gamma} \alpha \cdot \xi \leq \lim_{\xi \rightarrow 
+\gamma} \beta \cdot \xi$, or, equivalently, 
+$\alpha \cdot \gamma \leq \beta \cdot \gamma$.
+
+Lastly we consider exponentials. If $\gamma = 0$, then 
+$\alpha^0 = 1 = \beta^0$. If $\gamma + 1$ is a successor ordinal, then since 
+$\alpha < \beta$, by Lemma 2.25(iii), we have 
+$\alpha^{\gamma + 1} = \alpha^{\gamma} \cdot \alpha < \alpha^{\gamma} \cdot 
+\beta$, and by the preceding result for products, 
+$\alpha^{\gamma} \cdot \beta \leq \beta^{\gamma} \cdot \beta = \beta^{\gamma + 
+1}$. Therefore, $\alpha^{\gamma + 1} \leq \beta^{\gamma + 1}$. Finally, if 
+$\gamma$ is a nonzero limit ordinal, then for every $\xi < \gamma$, we have 
+$\alpha^{\xi} \leq \beta^{\xi}$. From this it follows that 
+$\lim_{\xi \rightarrow \gamma} \alpha^{\xi} \leq \lim_{\xi \rightarrow \gamma} 
+\beta^{\xi}$, or, equivalently, $\alpha^{\gamma} \leq \beta^{\gamma}$.
+\end{solution}
