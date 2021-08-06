@@ -417,3 +417,73 @@ $\alpha_n = \omega^{\alpha_m}$. Since $\alpha_m \leq \varepsilon$, we have
 $\alpha_n = \omega^{\alpha_m} \leq \omega^\varepsilon = \varepsilon$, 
 which is a contradiction.
 \end{solution}
+
+A limit ordinal $\gamma > 0$ is called \emph{indecomposable} if there exist no 
+$\alpha < \gamma$ and $\beta < \gamma$ such that $\alpha + \beta = \gamma$.
+
+\Exercise{13} A limit ordinal $\gamma > 0$ is indecomposable if and only if 
+$\alpha + \gamma = \gamma$ for all $\alpha < \gamma$ if and only if 
+$\gamma = \omega^\alpha$ for some $\alpha$
+\begin{solution}
+(ii) $\rightarrow$ (i) Let $\gamma$ be a nonzero limit ordinal and let 
+$\alpha < \gamma$ and $\beta < \gamma$. Then by Lemma 2.25(i) 
+$\alpha + \beta < \alpha + \gamma = \gamma$.
+
+(i) $\rightarrow$ (iii) Let $\gamma$ be indecomposable and let 
+$\gamma = \omega^{\beta_1} \cdot k_1 + \cdots + \omega^{\beta_n} \cdot k_n$ be 
+its Cantor normal form. Then 
+$\gamma \geq \beta_1 > \beta_2 > \cdots > \beta_n$ and $0 < k_i < \omega$. If 
+$n = 1$ then $\gamma = \omega^{\beta_1} \cdot k_1$. If $k_1 = 1$ then the 
+result is proved. Suppose that $n = 1$, $k_1 \geq 2$. By Lemma~2.25(ii) there 
+exists a unique ordinal $m$ such that $1 + m = k_1$. Using Exercise~8(i), we 
+have $\gamma = \omega^{\beta_1} + \omega^{\beta_1} \cdot m$. Since $1 < k_1$ 
+and, because $k_1$ is finite, $m < k_1$, by Lemma~2.25(iii) we have 
+$\omega^{\beta_1} < \gamma$ and $\omega^{\beta_1} \cdot m < \gamma$. The 
+indecomposability of $\gamma$ then implies that we have reached a 
+contradiction. We therefore conclude that $n = 1$ implies $k_1 = 1$ and the 
+result is proved as above.
+
+(iii) $\rightarrow$ (ii) First, we prove by transfinite induction on 
+$\epsilon > 0$ that for all $k < \omega$, 
+$k + \omega^\epsilon = \omega^\epsilon$. Obviously the property holds if 
+$\epsilon = 1$, since $k + \omega = \omega$. If the property holds for 
+$\epsilon$, then $k + \omega^{\epsilon + 1} = \lim_{n \rightarrow \omega} k 
++ \omega^\epsilon n = \lim_{n \rightarrow \omega} \omega^\epsilon n 
+= \omega^{\epsilon + 1}$. If $\epsilon$ is a nonzero limit ordinal such that 
+the property holds for all $\xi < \epsilon$, we have 
+$k + \omega^\epsilon = \lim_{\xi \rightarrow \epsilon} k + \omega^\xi 
+= \lim_{\xi \rightarrow \epsilon} \omega^\xi = \omega^\epsilon$. Now, let 
+$\beta < \gamma$ and let $\beta$ have the normal form 
+$\beta = \omega^{\beta_1} \cdot k_1 + \cdots + \omega^{\beta_n} \cdot k_n$ with
+$\beta \geq \beta_1 > \dots > \beta_n$ and $0 < k_i < \omega$. We have, for 
+some $\alpha$, $\omega^\alpha = \gamma > \beta$ and for all 
+$\delta \leq \beta_1$, $\omega^\delta \leq \omega^{\beta_1} \leq \beta$. From 
+this, it follows that $\alpha > \beta_1 > \cdots > \beta_n$. Therefore, 
+$\beta + \gamma = \beta +  \omega^\alpha = \omega^{\beta_1} k_1 + \cdots 
++ \omega^{\beta_{n - 1}} k_{n - 1} + \omega^{\beta_n} (k_n + \omega^\epsilon)$,
+where $\epsilon > 0$ satisfies $\epsilon + \beta_n = \alpha$. However, 
+$k_n + \omega^\epsilon = \omega^\epsilon$, from which it follows that 
+$\beta + \gamma = \omega^{\beta_1} k_1 + \cdots 
++ \omega^{\beta_{n - 1}} k_{n - 1} + \omega^\alpha$. Repeating this process, we
+eventually arrive at $\beta + \gamma = \omega^\alpha = \gamma$.
+\end{solution}
+
+\Exercise{14} If $E$ is a well-founded relation on $P$, then there is no 
+sequence $\langle a_n : n \in \N \rangle$ in $P$ such that $a_1 \; E \; a_0$,
+ $a_2 \; E \; a_1$, $a_3 \; E \; a_2$, $\ldots$.
+\begin{solution}
+Suppose that there exists such a sequence. Then the set 
+$X = \{ a_n : n \in \N \}$ is a nonempty subset of $P$. Therefore, since $E$ 
+is well-founded, $X$ has an $E$-minimal element. Let $x$ be an $E$-minimal 
+element of $X$ and let $n$ be such that $a_n = x$. Then 
+$a_{n + 1} \; E \; a_n = x$, which contradicts the $E$-minimality of $x$. 
+We therefore conclude that no such sequence exists.
+\end{solution}
+
+\Exercise{15} \textbf{(Well-Founded Recursion).} Let $E$ be a well-founded 
+relation on a set $P$, and let $G$ be a function. Then there exists a function 
+$F$ such that for all 
+$x \in P$, $F(x) = G(x, F \upharpoonright \{ y \in P : y \; E \; x \})$.
+\begin{solution}
+This is Theorem 6.11 of the text.
+\end{solution}
